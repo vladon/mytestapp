@@ -4,6 +4,8 @@
 
 int main(int argc, char *argv[])
 {
+	qDebug("Test");
+
 	MyCoreApp a(argc, argv);
 
 	int result = 0;
