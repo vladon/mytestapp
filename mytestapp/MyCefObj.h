@@ -1,5 +1,6 @@
 #pragma once
 #include <QtCore/QObject>
+#include <QtCore/QThread>
 #include "MyCefApp.h"
 
 class MyCefObj :
@@ -11,9 +12,12 @@ public:
 	MyCefObj(QThread *thread, std::string CefHomeUrl);
 	~MyCefObj();
 
+	public slots:
+	void start();
+
 private:
 	CefRefPtr<MyCefApp> _CefApp;
-	QString _CefHomeUrl;
+	std::string _CefHomeUrl;
 
 	void * sandbox_info;
 
